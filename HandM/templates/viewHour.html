@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+<!--Inherits the head of the base class-->
+{% block head%}
+
+<link rel="stylesheet" href="static/viewHrStyle.css" />
+
+{% endblock %}
+
+
+<!--Body-->
+
+{%block body%}
+
+<!--Person name-->
+<h3>{{ person_name }}</h3>
+
+
+
+<!--The links bar-->
+
+<ul class="bar">
+
+    <li> <a href="/home">Home</a> </li>
+    <li> <a href="/addHour">Add Hrs</a> </li>
+    <li> <a href="/subtractHour">Subtract Hrs</a> </li>
+
+    <li> <a  href="/viewHour">View total Hrs</a> </li>
+
+    <!--Create a button-->
+    <li> <a class="logout" href="logout">Log out</a> </li>
+
+</ul><br><br>
+
+
+<!--Tables rows-->
+
+<table>
+    <tr>
+        {% for i in table_column%}
+            <th>{{ i }}</th>
+        {% endfor %}
+    </tr>
+
+    
+    <tr>
+        {% for x in view_data %}
+            <td>{{ x }}</td>
+        {% endfor %}   
+    </tr>
+
+</table>
+
+{%endblock%}

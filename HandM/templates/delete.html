@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+
+
+<!--Bock body-->
+
+{% block body %}
+
+
+<!--Style-->
+
+{% block head %}
+
+<link rel="stylesheet" href="static/deleteStyle.css" />
+
+{% endblock %}
+
+
+
+<form method="post" action="/delete" required>
+    <p><strong>If you are sure to delete your account select yes</strong></p>
+
+    <table>
+        <tr>
+            <th>
+                <input type="radio" id="yes" name="decision" value="yes">
+                <label for="yes">Yes</label><br>
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                <input type="radio" id="no" name="decision" value="no">
+                <label for="no">No</label><br>
+            </th>
+        </tr>
+    </table>
+
+    <input type="submit" class="submit" placeholder="submit">
+
+</form>
+
+{% endblock %}

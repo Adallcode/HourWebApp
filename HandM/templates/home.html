@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+<!--Use a CSS file-->
+
+{% block head%}
+
+<link rel="stylesheet" href="static/homeStyle.css" />
+
+{% endblock %}
+
+
+
+<!--Bock body-->
+
+{%block body%}
+
+    <!--Person name-->
+    <h3>{{ person_name }}</h3>
+    
+    
+    <!--The links bar-->
+
+    <ul class="bar">
+        <li > <a class="activeLink" href="/home" >Home</a> </li>
+
+        <li > <a class="bar" href="/addHour" >Add Hrs</a> </li>
+        <li > <a class="bar" href="/subtractHour" >Subtract Hrs</a> </li>
+        <li > <a  class="bar" href="/viewHour" >View total Hrs</a> </li>
+
+        <!--Create a button-->
+        <li class="logout"> <a class="logout" href="logout">Log out</a> </li>
+        <li > <a class="bar" href="/delete" >Delete account</a> </li>
+
+    </ul>
+
+    <h2>Do what make you happy!</h2>
+
+
+
+{%endblock%}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+<!--Inherits the head of the base class-->
+
+{% block head%}
+
+<link rel="stylesheet" href="static/addHourStyle.css" />
+
+{% endblock %}
+
+
+
+
+<!--Body-->
+
+{% block body %}
+
+<!--Person name-->
+<h3>{{ person_name }}</h3>
+
+<!--The links bar-->
+
+<ul class="bar">
+
+    <li> <a href="/home">Home</a> </li>
+    <li> <a href="/addHour">Add Hrs</a> </li>
+    <li> <a href="/subtractHour">Subtract Hrs</a> </li>
+
+    <li> <a  href="/viewHour">View total Hrs</a> </li>
+
+    <!--Create a button-->
+    <li> <a class="logout" href="logout">Log out</a> </li>
+
+</ul><br><br>
+
+
+<!--Flash-->
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for i in messages %}
+            <p> <strong> {{ i }} </strong> </p>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+
+<!--Form-->
+<form method="post" action="/addHour">
+
+    <table>
+        <tr><td>Enter hours and minutes</td></tr>
+
+        <tr>
+            <th>
+                <label for="hours">Hours:</label><br>
+                <input type="number" name="hours" value="0" placeholder="Hours"><br>
+            </th>
+        </tr>
+    
+        <tr>
+            <th>
+                <label for="minutes">Minutes:</label><br>
+                <input type="number" name="minutes" value="0"  placeholder="Minutes">
+            </th>
+        </tr>
+    </table>
+
+    <button type="submit" name="submit">Submit</button>
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+body{
+    background-color:blanchedalmond;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    overflow:hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 17px 102px;
+    color: white;
+    
+}
+
+li a:hover{
+    background-color: darkgreen;
+}
+
+form{
+    border: 1px solid darkblue;
+    background-color: darkorange;
+    width: 30%;
+    height: 200px;
+}
+
+table {
+    margin: 16px 100px;
+}
+
+button{
+    
+    background-color: rgba(0, 0, 0, 0.671);
+    color: red;
+    margin-left: 150px;
+    width: 100px;
+    height: 40px;
+}
+
+button:hover{
+    background-color: lightskyblue;
+}
+
+h3{
+    background-color:sienna; 
+    width: 10%;
+    padding: 8px 8px;
+    color: white;
+}

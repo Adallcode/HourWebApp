@@ -1,0 +1,64 @@
+body{
+    background-image: url("img/image3.jpg");
+    background-repeat: no-repeat;
+    background-size: 1500px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    overflow:hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 17px 102px;
+    color: white;
+    
+}
+
+a:hover{
+    background-color: darkolivegreen;
+}
+
+a.logout:hover{
+    background-color: orangered;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:darkviolet;
+    width: 100%;
+
+}
+
+tr{
+    text-align: center;
+    padding-top: 25px;
+}
+
+th {
+    border: 2px solid black;
+    font-size: 20px;
+    height: 50px;
+}
+
+td{
+    border: 2px solid black;
+    height: 50px;
+}
+
+h3{
+    background-color:sienna; 
+    width: 10%;
+    padding: 8px 8px;
+    color: white;
+}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+<!--Use a CSS file-->
+
+{% block head%}
+
+<link rel="stylesheet" href="static/signinStyle.css"> 
+
+
+{% endblock %}
+
+
+
+<!--Bock body-->
+
+{% block body %}
+
+
+
+
+<!--Sign in button -->
+
+<ul class="button">
+
+    <li class="button"> <a class="button" href="/signup">Create an account</a></li>
+
+</ul>
+
+
+<!--Flash-->
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for i in messages %}
+            <p style="text-align: center; font-size: 28px;"> <strong > {{ i }} </strong> </p>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+
+
+
+<!--The data require to sign up-->
+
+
+<form method="post" action="/signin">
+    
+
+    <ul class="data">
+        
+        <!--Paragraph-->
+        <h3 style="text-align: center;">If you already have an account than sign in</h3>
+
+
+        <li class="EP">
+            <label for="email">E-mail </label><br>
+            <input class="EP" type="email" name="email" placeholder="e-mail">
+        </li>
+
+        <li class="EP">
+            <label for="passwd"> Password </label><br>
+            <input class="EP" type="password" name="passwd" placeholder="password"><br> 
+        </li>
+
+        <li class="submit">
+            <input class="submit" type="submit" name="submit" value="Submit">
+        </li>
+    </ul> 
+    
+
+</form>
+
+
+
+{% endblock %}
