@@ -13,6 +13,6 @@ Everything goes to be stored in a database (MySQL).
 
 First create an account, sign in, than you can navigate inside the Application and you can delete your account (home/delete).
 
-Technologies used: Python, flask, MySQL database, html and css.
+Technologies used: Python, flask, MySQL database, jinja2, html and css.
 
 Notes: How i created the database, table and user is not here because i created in the command prompt.
